@@ -1,0 +1,344 @@
+/*
+
+  Josh's Custom CSS Reset
+
+  https://www.joshwcomeau.com/css/custom-css-reset/
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+#mainContainer {
+  display: grid;
+  height: 100dvh;
+  grid-template-columns: repeat(4, minmax(10px, 1fr));
+  grid-template-rows: repeat(5, minmax(10px, 1fr));
+}
+#navbar {
+  background-color: #f4edea;
+  grid-column: 2/-1;
+  display: grid;
+  box-shadow: 0px 6px 8px rgb(165, 164, 164);
+  grid-template-rows: repeat(2, minmax(10px, 1fr));
+}
+#search {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
+  height: 100%;
+}
+#bar {
+  height: 100%;
+  display: flex;
+  gap: 2%;
+  grid-column: 1/3;
+  place-items: center;
+}
+.circle {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-image: url("/icons + images/sword.svg");
+  background-color: inherit;
+  background-position: center;
+}
+#bar > :first-child {
+  width: 35px;
+  background-image: url("/icons + images/magnify.svg");
+  background-position: center;
+}
+#bell {
+  display: flex;
+  justify-content: end;
+  height: 100%;
+  gap: 9%;
+  padding: 0% 15%;
+  place-items: center;
+}
+#bell > p {
+  margin: auto 0px;
+}
+#bell > :first-child {
+  background-image: url("/icons + images/bell-ring-outline.svg");
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+#bell > span:last-of-type {
+  border: 1px solid black;
+  background-size: 80%;
+}
+#greet {
+  display: flex;
+  width: 35%;
+  gap: 2%;
+  place-items: center;
+}
+#menus {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 2%;
+}
+#greet > span:first-child {
+  height: 60px;
+  border: 1px solid black;
+  width: 60px;
+}
+input {
+  width: 95%;
+  border-radius: 20px;
+}
+#interaction {
+  background-color: inherit;
+  width: 50%;
+  justify-content: space-between;
+  display: flex;
+  place-items: center;
+  gap: 10%;
+  padding: 0% 5%;
+}
+#interaction > div {
+  height: 60%;
+  width: 48%;
+  text-align: center;
+  padding: 3% 0%;
+  color: #f4edea;
+  border-radius: 30px;
+  background-color: #12263a;
+}
+#sidebar {
+  grid-row: 1/-1;
+  background-color: #12263a;
+  color: #f4edea;
+}
+#sidebar span {
+  color: #f4edea;
+}
+#sidebar > div {
+  padding: 5%;
+  gap: 2%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+}
+#sidebar h2 {
+  font-size: 1.8rem;
+}
+#sidebar p {
+  font-size: 1.5rem;
+}
+#sidebar h2,
+p {
+  display: flex;
+  place-items: center;
+  gap: 8%;
+}
+#sidebar span {
+  filter: invert(96%) sepia(6%) saturate(191%) hue-rotate(318deg)
+    brightness(105%) contrast(91%);
+  height: 30px;
+  width: 30px;
+}
+#Dashboard {
+  background-image: url("/icons + images/view-dashboard.svg");
+}
+#home {
+  background-image: url("/icons + images/home-variant-outline.svg");
+}
+#Profile {
+  background-image: url("/icons + images/account-group.svg");
+}
+#History {
+  background-image: url("/icons + images/clock.svg  ");
+}
+#Tasks {
+  background-image: url("/icons + images/calendar-check.svg");
+}
+#Communities {
+  background-image: url("/icons + images/account-group.svg");
+}
+#Messages {
+  background-image: url("/icons + images/message-outline.svg");
+}
+#Settings {
+  background-image: url("/icons + images/cog-outline.svg");
+}
+#Support {
+  background-image: url("/icons + images/face-agent.svg");
+}
+#Privacy {
+  background-image: url("/icons + images/shield-check-outline.svg");
+}
+#content {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(10px, 1fr));
+  padding: 2%;
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+}
+#cards {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  justify-content: space-between;
+}
+#cards > div {
+  display: grid;
+  grid-gap: 1%;
+  height: 95%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+#highlights {
+  display: grid;
+  row-gap: 2%;
+  max-height: 75dvh;
+  grid-template-rows: repeat(2, minmax(10px, 1fr));
+}
+.project {
+  background-color: whitesmoke;
+  padding: 5%;
+  max-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+.project > div {
+  height: 30%;
+  max-height: 40px;
+  width: 70%;
+  padding: 2% 0%;
+  place-self: end;
+  display: flex;
+  justify-content: space-evenly;
+  place-items: center;
+}
+.project > div > span {
+  height: 100%;
+  display: flex;
+  width: 30px;
+  background-position: center;
+  background-size: contain;
+  padding: 2%;
+}
+#Announcements {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+#Announcements h2 {
+  font-size: 1.5rem;
+  background-color: #fff;
+}
+#Announcements div {
+  padding: 5%;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+#Announcements #itsMe {
+  border-top: 1px solid gray;
+  border-radius: 0%;
+  border-bottom: 1px solid gray;
+}
+.star {
+  background-image: url("/icons + images/star-plus-outline.svg");
+}
+.share {
+  background-image: url("/icons + images/share-variant.svg");
+}
+.eye {
+  background-image: url("/icons + images/eye-plus-outline.svg");
+}
+#trending {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  gap: 3%;
+}
+#trending > div {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  border-radius: 10px;
+  gap: 3%;
+  background-color: lightgray;
+}
+#trending > div > div {
+  display: flex;
+  gap: 2%;
+  place-items: center;
+}
+#trending .circle {
+  height: 30px;
+  width: 30px;
+  border: 1px solid gray;
+}
+.Mat {
+  background-image: url("/icons + images/spear.svg");
+}
+.Perrin {
+  background-image: url("/icons + images/hammer.svg");
+}
+.Lan {
+  background-image: url("/icons + images/horse-variant.svg");
+}
+#trending > div {
+  display: flex;
+}
+#trending > .circle {
+  height: 30px;
+  width: 30px;
+}
+#sidebar {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(10px, 1fr));
+}
